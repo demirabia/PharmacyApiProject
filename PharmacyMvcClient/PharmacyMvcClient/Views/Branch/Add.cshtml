@@ -1,0 +1,35 @@
+﻿@using PharmacyMvcClient.Models;
+@model Branch
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<html>
+<head>
+    <title></title>
+    <link href="~/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container mt-2">
+        <form asp-action="Add" asp-controller="Branch" method="post">
+            <div class="form-group">
+                <label>Branch Name:</label>
+                <input type="text" name="BranchName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Branch Phone :</label>
+                <input type="text" name="BranchPhone" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Branch Adress :</label>
+                <input type="text" name="BranchAdress" class="form-control" />
+            </div>
+            <div class="form-group">
+
+                <button type="submit" class="btn-primary">Save</button>
+            </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
